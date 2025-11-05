@@ -1,0 +1,70 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -240px;
+  width: 240px;
+  height: 100vh;
+  background-color: var(--secondary-bg);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  padding-top: 56px;
+  transition: left var(--transition-normal);
+  z-index: 1001;
+  border-right: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color var(--transition-fast);
+}
+
+.close-btn:hover {
+  background-color: var(--hover-bg);
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-md) 0;
+  overflow-y: auto;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 12px var(--spacing-lg);
+  transition: background-color var(--transition-fast);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.sidebar-link:hover {
+  background-color: var(--hover-bg);
+}
+
+.sidebar-link.active {
+  background-color: var(--hover-bg);
+  font-weight: 500;
+}

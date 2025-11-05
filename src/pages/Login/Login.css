@@ -1,0 +1,96 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--primary-bg);
+  padding: var(--spacing-md);
+}
+
+.auth-box {
+  background-color: var(--secondary-bg);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid var(--border-color);
+}
+
+.auth-title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background-color: var(--tertiary-bg);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast);
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.auth-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: var(--radius-md);
+  background-color: var(--accent-color);
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  margin-top: var(--spacing-sm);
+}
+
+.auth-button:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+}
+
+.auth-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-error {
+  color: var(--error-color);
+  margin-bottom: var(--spacing-md);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: var(--spacing-sm);
+  background-color: rgba(255, 82, 82, 0.1);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 82, 82, 0.3);
+}
+
+.auth-switch {
+  margin-top: var(--spacing-lg);
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.auth-switch a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.auth-switch a:hover {
+  color: var(--accent-light);
+  text-decoration: underline;
+}

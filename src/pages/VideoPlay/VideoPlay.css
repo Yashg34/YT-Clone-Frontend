@@ -1,0 +1,113 @@
+.video-play-page-wrapper {
+  padding: var(--spacing-lg);
+  max-width: 1800px;
+  margin: 0 auto;
+  min-height: calc(100vh - 56px);
+}
+
+.video-player-section {
+  max-width: 1280px;
+  margin: 0 auto var(--spacing-xl);
+}
+
+.main-video-player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-md);
+  background-color: #000;
+  box-shadow: var(--shadow-md);
+}
+
+.video-title-main {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.video-metadata-line {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.dot-separator {
+  color: var(--text-tertiary);
+}
+
+.engagement-buttons-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.channel-description-area {
+  background-color: var(--secondary-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  border: 1px solid var(--border-color);
+}
+
+.channel-info-display {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: var(--spacing-md);
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.channel-info-display:hover {
+  opacity: 0.8;
+}
+
+.channel-avatar-large {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  object-fit: cover;
+}
+
+.channel-name-link {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.video-description-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.comments-section-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .video-play-page-wrapper {
+    padding: var(--spacing-md);
+  }
+
+  .video-title-main {
+    font-size: 1.1rem;
+  }
+
+  .engagement-buttons-group {
+    flex-wrap: wrap;
+  }
+}

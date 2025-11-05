@@ -1,0 +1,134 @@
+.playlist-page {
+  padding: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 56px);
+}
+
+.playlist-page h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-primary);
+}
+
+.playlist-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background-color: var(--secondary-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+.playlist-form input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background-color: var(--tertiary-bg);
+  color: var(--text-primary);
+}
+
+.playlist-form button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.playlist-form button[type="submit"] {
+  background-color: var(--accent-color);
+  color: var(--text-primary);
+}
+
+.playlist-form button[type="submit"]:hover {
+  background-color: var(--accent-hover);
+}
+
+.cancel-btn {
+  background-color: var(--hover-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+.cancel-btn:hover {
+  background-color: var(--border-color) !important;
+}
+
+.playlist-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.playlist-card {
+  background-color: var(--secondary-bg);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.playlist-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.playlist-card h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
+}
+
+.playlist-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.5;
+}
+
+.playlist-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.playlist-actions button {
+  flex: 1;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+}
+
+.playlist-actions button:hover {
+  background-color: var(--accent-color);
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .playlist-page {
+    padding: var(--spacing-md);
+  }
+
+  .playlist-form {
+    flex-direction: column;
+  }
+
+  .playlist-form input {
+    min-width: 100%;
+  }
+
+  .playlist-list {
+    grid-template-columns: 1fr;
+  }
+}

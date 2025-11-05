@@ -1,0 +1,41 @@
+.subscribe-button {
+  /* Layout and Sizing */
+  padding: 8px 18px;
+  border: none;
+  border-radius: 4px; 
+  font-weight: bold;
+  font-size: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-left: 10px; /* Separate from the like button */
+  transition: background-color 0.2s, color 0.2s, border 0.2s;
+}
+
+/* Not Subscribed State (The Call-to-Action) */
+.subscribe-button.not-subscribed {
+  color: #fff;
+  background-color: #cc0000; /* YouTube-red */
+}
+
+.subscribe-button.not-subscribed:hover:not(:disabled) {
+  background-color: #ff0000;
+}
+
+/* Subscribed State (Less prominent) */
+.subscribe-button.subscribed {
+  color: #606060;
+  background-color: #f2f2f2;
+  /* Optional: Add a light gray border to define it */
+  border: 1px solid #ccc;
+}
+
+.subscribe-button.subscribed:hover:not(:disabled) {
+  background-color: #e5e5e5;
+  color: #333;
+}
+
+/* Disabled State */
+.subscribe-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}

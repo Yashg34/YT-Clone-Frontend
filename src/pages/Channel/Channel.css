@@ -1,0 +1,133 @@
+/* --- General Channel Container Styling --- */
+.channel-container {
+  max-width: 1200px; /* Limit width for large screens */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+}
+
+/* --- Channel Header Styling (Avatar and Info) --- */
+.channel-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+.channel-avatar {
+  margin-right: 20px;
+}
+
+.channel-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Make the avatar round */
+  object-fit: cover;
+  border: 3px solid #f0f0f0;
+}
+
+.channel-info h2 {
+  margin: 0 0 5px 0;
+  font-size: 1.8em;
+  color: #333;
+}
+
+.channel-info p {
+  margin: 0 0 10px 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.subscriber-count {
+  font-weight: bold;
+  color: #555;
+  background-color: #eee;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+/* --- Channel Videos Section --- */
+.channel-videos h3 {
+  font-size: 1.5em;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+/* --- Video Grid Styling (Responsive) --- */
+.video-grid {
+  display: grid;
+  /* Default: 1 column on small screens */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* --- Individual Video Card Styling --- */
+.video-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures the image doesn't bleed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer; /* Confirms it's clickable */
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the thumbnail image */
+.video-thumbnail {
+  width: 100%;
+  /* Maintain a common video aspect ratio (16:9) */
+  aspect-ratio: 16 / 9; 
+  object-fit: cover;
+  display: block; /* Removes any default bottom spacing */
+}
+
+.video-card h4 {
+  font-size: 1em;
+  margin: 10px;
+  color: #333;
+  /* Truncate long titles with ellipsis */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- Loader and Error Styling --- */
+.loader,
+.error {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2em;
+  color: #888;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+/* --- Individual Video Card Styling --- */
+.video-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  /* Optimized Transition: Focus on transform for better performance */
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out; 
+  cursor: pointer; 
+  position: relative; /* Added for stability */
+}
+
+.video-card:hover {
+  /* Use a slightly different, potentially faster 'lift' effect */
+  transform: scale(1.03); 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* More noticeable shadow on hover */
+}
+/* ... rest of your CSS ... */

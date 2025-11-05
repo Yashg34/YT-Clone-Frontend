@@ -1,0 +1,135 @@
+.tweet-page {
+  padding: var(--spacing-lg);
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: calc(100vh - 56px);
+}
+
+.tweet-page h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-primary);
+}
+
+.tweet-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background-color: var(--secondary-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+.tweet-form textarea {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background-color: var(--tertiary-bg);
+  color: var(--text-primary);
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.tweet-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.tweet-form button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  align-self: flex-end;
+}
+
+.tweet-form button[type="submit"] {
+  background-color: var(--accent-color);
+  color: var(--text-primary);
+}
+
+.tweet-form button[type="submit"]:hover {
+  background-color: var(--accent-hover);
+}
+
+.cancel-btn {
+  background-color: var(--hover-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+.cancel-btn:hover {
+  background-color: var(--border-color) !important;
+}
+
+.tweet-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.tweet-card {
+  background-color: var(--secondary-bg);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  transition: box-shadow var(--transition-fast);
+}
+
+.tweet-card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.tweet-card p {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.tweet-date {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+.tweet-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.tweet-actions button {
+  padding: 6px 12px;
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all var(--transition-fast);
+}
+
+.tweet-actions button:hover {
+  background-color: var(--accent-color);
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .tweet-page {
+    padding: var(--spacing-md);
+  }
+
+  .tweet-form {
+    padding: var(--spacing-md);
+  }
+}
