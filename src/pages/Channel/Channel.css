@@ -1,133 +1,229 @@
-/* --- General Channel Container Styling --- */
+/* ==========================================================================
+   1. GENERAL CHANNEL CANVAS
+   ========================================================================== */
 .channel-container {
-  max-width: 1200px; /* Limit width for large screens */
-  margin: 0 auto; /* Center the container */
-  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: #0f0f0f;
+  min-height: 100vh;
+  color: #fff;
 }
 
-/* --- Channel Header Styling (Avatar and Info) --- */
+/* ==========================================================================
+   2. CHANNEL HEADER SECTION
+   ========================================================================== */
 .channel-header {
   display: flex;
   align-items: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 30px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #272727;
+  margin-bottom: 24px; /* Reduced to bring content up */
 }
 
 .channel-avatar {
-  margin-right: 20px;
+  margin-right: 24px;
+  flex-shrink: 0;
 }
 
 .channel-avatar img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%; /* Make the avatar round */
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #f0f0f0;
+  border: 2px solid #272727;
+}
+
+.channel-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
 }
 
 .channel-info h2 {
-  margin: 0 0 5px 0;
-  font-size: 1.8em;
-  color: #333;
+  margin: 0 0 6px 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .channel-info p {
-  margin: 0 0 10px 0;
-  color: #666;
-  font-size: 0.9em;
+  margin: 0;
+  color: #aaaaaa;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
-.subscriber-count {
-  font-weight: bold;
-  color: #555;
-  background-color: #eee;
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-size: 0.85em;
-}
-
-/* --- Channel Videos Section --- */
-.channel-videos h3 {
-  font-size: 1.5em;
-  border-bottom: 2px solid #333;
-  padding-bottom: 5px;
-  margin-bottom: 20px;
-}
-
-/* --- Video Grid Styling (Responsive) --- */
-.video-grid {
-  display: grid;
-  /* Default: 1 column on small screens */
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-/* --- Individual Video Card Styling --- */
-.video-card {
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  overflow: hidden; /* Ensures the image doesn't bleed */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s, box-shadow 0.2s;
-  cursor: pointer; /* Confirms it's clickable */
-}
-
-.video-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Style for the thumbnail image */
-.video-thumbnail {
+/* ==========================================================================
+   3. VIDEOS SECTION (Optimized Unique Grid)
+   ========================================================================== */
+.channel-videos-section {
+  margin-bottom: 20px; /* Reduced container bottom space */
   width: 100%;
-  /* Maintain a common video aspect ratio (16:9) */
-  aspect-ratio: 16 / 9; 
-  object-fit: cover;
-  display: block; /* Removes any default bottom spacing */
 }
 
-.video-card h4 {
-  font-size: 1em;
-  margin: 10px;
-  color: #333;
-  /* Truncate long titles with ellipsis */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.channel-videos-section h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 8px;
+  margin-bottom: 16px; /* Reduced gap below "Videos" title */
+  color: #ffffff;
 }
 
-/* --- Loader and Error Styling --- */
+.channel-video-grid-layout {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
+  gap: 20px !important; /* Tightened card spacing gap */
+  width: 100% !important;
+  padding: 4px 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Individual Video Cards */
+.channel-individual-video-card {
+  background-color: #1a1a1a !important;
+  border: 1px solid #2a2a2a !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  cursor: pointer !important;
+  position: relative !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.channel-individual-video-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Widescreen Thumbnail */
+.channel-video-card-thumbnail {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  object-fit: cover !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+  background-color: #000000 !important;
+}
+
+/* Video Title */
+.channel-video-card-title {
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+  margin: 12px !important;
+  color: #ffffff !important;
+  text-align: left !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: normal !important;
+}
+
+/* ==========================================================================
+   4. TWITTER / TWEETS SECTION (Gap Reduction)
+   ========================================================================== */
+hr {
+  border: 0;
+  height: 1px;
+  background: #272727;
+  margin: 20px 0; /* Cut divider margin spacing in half */
+}
+
+.user-tweets h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.tweets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.tweet-card {
+  background-color: #161616;
+  border: 1px solid #272727;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tweet-content {
+  color: #f1f1f1;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.tweet-date {
+  color: #717171;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   5. UTILITY STATUS LAYOUTS
+   ========================================================================== */
 .loader,
 .error {
   text-align: center;
-  padding: 50px;
-  font-size: 1.2em;
-  color: #888;
+  padding: 60px 20px;
+  font-size: 1.15rem;
+  color: #aaaaaa;
+  background-color: #0f0f0f;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .error {
-  color: red;
-  font-weight: bold;
+  color: #ff4d4d;
+  font-weight: 600;
 }
 
-/* --- Individual Video Card Styling --- */
-.video-card {
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  overflow: hidden; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  /* Optimized Transition: Focus on transform for better performance */
-  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out; 
-  cursor: pointer; 
-  position: relative; /* Added for stability */
-}
+/* ==========================================================================
+   6. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 768px) {
+  .channel-container {
+    padding: 16px;
+  }
 
-.video-card:hover {
-  /* Use a slightly different, potentially faster 'lift' effect */
-  transform: scale(1.03); 
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* More noticeable shadow on hover */
+  .channel-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .channel-avatar {
+    margin-right: 0;
+  }
+
+  .channel-avatar img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .channel-info-wrapper {
+    align-items: center;
+  }
+  
+  .channel-video-grid-layout {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+    gap: 16px !important;
+  }
 }
-/* ... rest of your CSS ... */

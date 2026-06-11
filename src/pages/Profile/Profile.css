@@ -214,8 +214,14 @@
 
 .history-video-thumbnail {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  /* ❌ Remove height: 150px; */
+  
+  /* Add a perfect 16:9 widescreen aspect ratio */
+  aspect-ratio: 16 / 9; 
+  
+  /* Keeps the image clean and handles boundary fitting */
+  object-fit: cover; 
+  background-color: #000; /* Fallback black bar background if the image aspect ratio is odd */
 }
 
 .history-video-info {

@@ -90,30 +90,29 @@ const Channel = () => {
         </div>
       </div>
 
-      <div className="channel-videos">
-        <h3>Videos</h3>
-        <div className="video-grid">
-          {videos.length === 0 ? (
-            <p>No videos uploaded yet.</p>
-          ) : (
-            videos.map((video) => (
-              <div
-                key={video._id}
-                className="video-card"
-                onClick={() => handleVideoClick(video._id)}
-                style={{ cursor: "pointer" }}
-              >
-                <img
-                  src={video.thumbnail}
-                  alt={video.title}
-                  className="video-thumbnail"
-                />
-                <h4>{video.title}</h4>
-              </div>
-            ))
-          )}
-        </div>
-      </div>
+      <div className="channel-videos-section">
+  <h3>Videos</h3>
+  <div className="channel-video-grid-layout">
+    {videos.length === 0 ? (
+      <p>No videos uploaded yet.</p>
+    ) : (
+      videos.map((video) => (
+        <div
+          key={video._id}
+          className="channel-individual-video-card"
+          onClick={() => handleVideoClick(video._id)}
+        >
+          <img
+            src={video.thumbnail}
+            alt={video.title}
+            className="channel-video-card-thumbnail"
+          />
+          <h4 className="channel-video-card-title">{video.title}</h4>
+        </div>
+      ))
+    )}
+  </div>
+</div>
       
       {/* 🐦 SECTION: DISPLAY USER TWEETS */}
       <hr /> 
