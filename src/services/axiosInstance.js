@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-    baseURL: 'https://yt-clone-backend-mpjm.onrender.com',
+    baseURL: 'https://yt-clone-backend-mpjm.onrender.com/api/v1',
     withCredentials: true,
 });
 
